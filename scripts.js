@@ -69,13 +69,14 @@ function createItem(item,index){
      var hide=item.active?'':'hidden';
      var isSolded=item.active?'Buy':'Sold';
      var buyColor=item.active?'blue':'gray-dark';
+     
     newcontent.innerHTML = `
         <div class="row flex space-b p-1 wrap baseline availble item">
                 <div class="itemname">${item.name}</div>
                 <div class="center  ">
                     <button class="green inc ${hide}" onclick="inc(${index})" style="visibility">+</button>
                     <span class="small-border gray p-2 counter">${item.count}</span> 
-                    <button class="decr red  ${hide}" onclick="decr(${index})" style="visibility" disabled="${item.count<=1}">-</button>
+                    <button class="decr red  ${hide}" onclick="decr(${index})" style="visibility" ${item.count<=1?'disabled':''}>-</button>
                 </div>
                 <div class="left">
                     <button class="ui-button ${buyColor}" onclick="toggleSold(${index})">${isSolded}</button>
