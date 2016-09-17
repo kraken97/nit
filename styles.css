@@ -187,3 +187,8 @@ hr{
     flex:  0 1 15%;
 
 }
+button[disabled]{
+    background: gray;
+    cursor: not-allowed;
+
+}

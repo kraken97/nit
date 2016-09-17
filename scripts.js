@@ -75,7 +75,7 @@ function createItem(item,index){
                 <div class="center  ">
                     <button class="green inc ${hide}" onclick="inc(${index})" style="visibility">+</button>
                     <span class="small-border gray p-2 counter">${item.count}</span> 
-                    <button class="decr red ${item.count<=1?'gray-dark':''} ${hide}" onclick="decr(${index})" style="visibility">-</button>
+                    <button class="decr red  ${hide}" onclick="decr(${index})" style="visibility" disabled="${item.count<=1}">-</button>
                 </div>
                 <div class="left">
                     <button class="ui-button ${buyColor}" onclick="toggleSold(${index})">${isSolded}</button>
