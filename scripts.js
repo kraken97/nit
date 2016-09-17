@@ -1,5 +1,7 @@
+    var items = [{name:"test",count:1,active:true},{name:"test22",count:1,active:false},{name:"test2",count:1,active:true}]
 
-var items = []
+
+
 
 function inc(i){
 items[i].count=items[i].count+1;
@@ -83,3 +85,9 @@ function createItem(item,index){
             `
             return newcontent;
 }
+
+
+document.addEventListener('DOMContentLoaded',function(){
+
+    update();
+})
