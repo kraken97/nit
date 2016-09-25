@@ -25,6 +25,7 @@ function toggleSold(i){
 function add(e){
     e.preventDefault(); 
     var name=e.target.elements["name"].value
+    e.target.elements["name"].value='';
     if(name!=''){
             items.push({name:name,count:1,active:true});
              update();
@@ -74,13 +75,13 @@ function createItem(item,index){
         <div class="row flex space-b p-1 wrap baseline availble item">
                 <div class="itemname">${item.name}</div>
                 <div class="center  ">
-                    <button class="green inc ${hide}" onclick="inc(${index})" style="visibility">+</button>
+                    <button class="green inc tooltip ${hide}" onclick="inc(${index})" style="visibility">+</button>
                     <span class="small-border gray p-2 counter">${item.count}</span> 
-                    <button class="decr red  ${hide}" onclick="decr(${index})" style="visibility" ${item.count<=1?'disabled':''}>-</button>
+                    <button class="decr red tooltip ${hide}" onclick="decr(${index})" style="visibility" ${item.count<=1?'disabled':''}>-</button>
                 </div>
                 <div class="left">
                     <button class="ui-button ${buyColor}" onclick="toggleSold(${index})">${isSolded}</button>
-                    <button class="ui-button red del ${hide}"  onclick="remove(${index})"  >X</button>'
+                    <button class="ui-button red del ${hide}"  onclick="remove(${index})"  >X</button>
                 </div>
             </div>
             `

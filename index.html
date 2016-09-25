@@ -5,13 +5,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>JS Bin</title>
-    <link rel="stylesheet" type="" href="./styles.css">
+    <link rel="stylesheet" type="text/css" href="./styles.css">
     <script src="./scripts.js"></script>
 </head>
 
 <body>
     <div class="container flex wrap center start">
-        <div class="section m-1 white f-big card ">
+        <div class="section m-1 white f-big card">
                 <form onsubmit="add(event)" class="search flex p-1">
                   <input type="text" class="grow " name="name" id="name-field"  placeholder="product name" />
                     <button class="add-button p-1 ui-border-right" type="submit">add</button>
@@ -20,7 +20,7 @@
             <div class="item-container">
             </div>
         </div>
-        <div class="section white m-1 f-small card">
+        <div class="section white m-1 f-small card transition">
                 <h3 class="p-1">Availble</h3>
                 <hr>
                 <div class="content p-1 flex wrap content-availble">
@@ -30,6 +30,17 @@
                 <hr>
                 <div class="content p-1 content-sold flex wrap">
                 </div>
+        </div>
+    </div>
+    <div class="badge">
+        <div class="badge-header">
+            BuyList
+
+        </div>
+        <div class="badge-body">
+            Created by:
+            <br>
+            Dima Zherebko
         </div>
     </div>
 </body>

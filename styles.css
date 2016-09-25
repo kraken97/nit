@@ -2,6 +2,7 @@ body{
     background: whitesmoke;
     font-size: 17px;
     font-family: sans-serif;
+    min-height: vhmin;  
 }
 
 .flex{
@@ -54,10 +55,10 @@ body{
   flex:3 2 500px;
 }
 .f-small{
+ 
     max-width: 700px;
   flex:2 3  250px;
 }
-
 .card {
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
@@ -96,7 +97,7 @@ button {
    border-radius: 3px;
    color: #eee;
    font-weight: 400;
-   font-size: 90%;
+   font-size: 1.2rem;
    box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.2), inset 0px 2px 0px rgba(255, 255, 255, 0.2), 0px 2px 1px rgba(0, 0, 0, 0.2);  
    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
    margin: 0px 5px 0px 5px;
@@ -137,9 +138,9 @@ input{
     margin: 0;
     outline: 0;
     -webkit-appearance: none;
-    line-height: 1.2142em;
-    padding: .67861429em 1em;
-    font-size: 1em;
+    line-height: 1.2142rem;
+    padding: .67861429em 1rem;
+    font-size: 1rem;
     background: #FFF;
     border: 1px solid  lightgray;
     color: rgba(0,0,0,.87);
@@ -191,4 +192,81 @@ button[disabled]{
     background: gray;
     cursor: not-allowed;
 
+}
+
+.badge{
+    position: fixed;
+    left: 20px;
+    border-radius: 15px 15px 0 0;
+    bottom: -55px;
+    border: 1px solid whitesmoke;
+    background: blueviolet;
+    transition: all 500ms ease-in-out;
+    padding: 20px 20px 0px 20px;
+    color: whitesmoke;
+    font-size: 1.3rem;
+    
+}
+.badge>*{
+    text-align: center; 
+}
+
+
+.badge .badge-header{
+    font-size: 1.7rem;
+}
+.badge .badge-body{
+    margin: 10px;
+
+
+}
+
+.badge:hover{
+    bottom: 0px;
+    background: darkblue;
+ 
+}
+
+@media print{
+    .badge{
+        background:white;
+        color: black;
+        border: 1px solid black;
+        bottom: 0px;
+    }
+
+    .badge-header{
+        display: none;
+    }
+}
+
+.tooltip{
+    position: relative;
+        display: inline;
+}
+
+.tooltip:hover::before {
+    content: 'tooltip';
+
+    background: blueviolet;
+    border-radius: 5px;
+    bottom: 50px;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    animation: fade-in 400ms ease-in-out  forwards
+}
+
+@keyframes fade-in{
+    0%{
+        opacity: 0;
+        transform: translateX(-50%) translateY(40px) scale(0);
+    }
+    100%{
+        transform:translateX(-50%) translateY(0px)  scale(1);
+        opacity: 1;
+    }
 }
