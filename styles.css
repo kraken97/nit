@@ -1,140 +1,163 @@
-body{
+body {
     background: whitesmoke;
     font-size: 17px;
     font-family: sans-serif;
-    min-height: vhmin;  
+    min-height: vhmin;
 }
 
-.flex{
-  display:flex;
+.flex {
+    display: flex;
 }
-.relative{
+
+.relative {
     position: relative;
 }
-.center{
+
+.center {
     justify-content: center;
 }
-.baseline{
+
+.baseline {
     align-items: baseline;
 }
-.wrap{
-  flex-wrap:wrap;
-}
-.space-b{
-  justify-content:space-between;
-}
-.start{
-    align-items: flex-start;
-}
-.grow{
-  flex-grow:1;
-}
-.p-1{
-  padding:20px;
-}
-.p-2{
-    padding: 15px;
-}
-.p-3{
-    padding: 7px;
-}
-.m-1{
-  margin:20px
-}
-.m-4{
-    margin: 6px;
-}
-.hidden{
-    visibility: hidden;
-}
-.section{
-  border-radius:5px;
-}
-.f-big{
-    max-width: 900px;
-  flex:3 2 500px;
-}
-.f-small{
- 
-    max-width: 700px;
-  flex:2 3  250px;
-}
-.card {
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+
+.wrap {
+    flex-wrap: wrap;
 }
 
-.white{
+.space-b {
+    justify-content: space-between;
+}
+
+.start {
+    align-items: flex-start;
+}
+
+.grow {
+    flex-grow: 1;
+}
+
+.p-1 {
+    padding: 20px;
+}
+
+.p-2 {
+    padding: 15px;
+}
+
+.p-3 {
+    padding: 7px;
+}
+
+.m-1 {
+    margin: 20px
+}
+
+.m-4 {
+    margin: 6px;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.none {
+    display: none;
+}
+
+.section {
+    border-radius: 5px;
+}
+
+.f-big {
+    max-width: 900px;
+    flex: 3 2 500px;
+}
+
+.f-small {
+    max-width: 700px;
+    flex: 2 3 250px;
+}
+
+.card {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.white {
     background: white;
 }
-.red{
+
+.red {
     background: #DB2828;
 }
 
-.green{
+.green {
     background: green;
 }
 
-.gray{
+.gray {
     background: whitesmoke;
 }
-.gray-dark{
+
+.gray-dark {
     background: gray;
 }
-.main-color{
-background: #1876bd;
-}
-.orange{
-    background: #F2711C;
+
+.main-color {
+    background: #1876bd;
 }
 
+.orange {
+    background: #F2711C;
+}
 
 button {
     border: none;
     outline: none;
-   display: inline-block;
-   padding: 10px 20px 10px 20px;
-   background: #1876bd;
-   border-radius: 3px;
-   color: #eee;
-   font-weight: 400;
-   font-size: 1.2rem;
-   box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.2), inset 0px 2px 0px rgba(255, 255, 255, 0.2), 0px 2px 1px rgba(0, 0, 0, 0.2);  
-   text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
-   margin: 0px 5px 0px 5px;
-   cursor: pointer;
+    display: inline-block;
+    padding: 10px 20px 10px 20px;
+    background: #1876bd;
+    border-radius: 3px;
+    color: #eee;
+    font-weight: 400;
+    font-size: 1.2rem;
+    box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.2), inset 0px 2px 0px rgba(255, 255, 255, 0.2), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
+    margin: 0px 5px 0px 5px;
+    cursor: pointer;
 }
 
-
-.search button{
+.search button {
     margin-left: 0px;
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
 }
 
 button:active {
-   box-shadow: inset 0px 4px 6px rgba(0, 0, 0, 0.3), 0px 1px 0px #fff; 
+    box-shadow: inset 0px 4px 6px rgba(0, 0, 0, 0.3), 0px 1px 0px #fff;
 }
 
-.small-border{
+.small-border {
     border-radius: 10px;
-        border: 1px solid lightgray;
+    border: 1px solid lightgray;
 }
 
-.circle{
+.circle {
     border-radius: 50%;
 }
-button.circle{
-    width:40px;
+
+button.circle {
+    width: 40px;
     height: 40px;
     padding: 0;
 }
 
-input:active,input:focus{
-        border: 1px solid #2185D0;
-
+input:active,
+input:focus {
+    border: 1px solid #2185D0;
 }
 
-input{
+input {
     margin: 0;
     outline: 0;
     -webkit-appearance: none;
@@ -142,21 +165,26 @@ input{
     padding: .67861429em 1rem;
     font-size: 1rem;
     background: #FFF;
-    border: 1px solid  lightgray;
-    color: rgba(0,0,0,.87);
+    border: 1px solid lightgray;
+    color: rgba(0, 0, 0, .87);
     border-radius: 0px;
     box-shadow: none;
-    transition: color .1s ease,border-color .1s ease;
+    transition: color .1s ease, border-color .1s ease;
 }
 
-hr{
+div[contenteditable=true]:focus {
+    outline: 1px solid lightgray;
+    padding: 15px;
+}
+
+hr {
     display: block;
     border: 0;
     border-top: 1px solid #ccc;
     padding: 0;
 }
 
-.floating-label{
+.floating-label {
     position: absolute;
     top: -8px;
     right: -8px;
@@ -167,34 +195,36 @@ hr{
     line-height: 0.7;
 }
 
-.content-sold{
-        padding: 40px 20px;
-        
+.content-sold {
+    padding: 40px 20px;
 }
-.content-sold   span{
+
+.content-sold span {
     text-decoration: line-through;
 }
 
-.item{
-    border-bottom: 1px solid  lightgray;
+.item {
+    border-bottom: 1px solid lightgray;
+    animation: item_fade 1s fade-in;
 }
 
-.content-sold>span,.content-availble>span{
+.content-sold>span,
+.content-availble>span {
     display: block;
 }
-.itemname{
+
+.itemname {
     overflow: hidden;
     text-overflow: ellipsis;
-    flex:  0 1 15%;
-
+    flex: 0 1 15%;
 }
-button[disabled]{
+
+button[disabled] {
     background: gray;
     cursor: not-allowed;
-
 }
 
-.badge{
+.badge {
     position: fixed;
     left: 20px;
     border-radius: 15px 15px 0 0;
@@ -205,49 +235,44 @@ button[disabled]{
     padding: 20px 20px 0px 20px;
     color: whitesmoke;
     font-size: 1.3rem;
-    
-}
-.badge>*{
-    text-align: center; 
 }
 
+.badge>* {
+    text-align: center;
+}
 
-.badge .badge-header{
+.badge .badge-header {
     font-size: 1.7rem;
 }
-.badge .badge-body{
+
+.badge .badge-body {
     margin: 10px;
-
-
 }
 
-.badge:hover{
+.badge:hover {
     bottom: 0px;
     background: darkblue;
- 
 }
 
-@media print{
-    .badge{
-        background:white;
+@media print {
+    .badge {
+        background: white;
         color: black;
         border: 1px solid black;
         bottom: 0px;
     }
-
-    .badge-header{
+    .badge-header {
         display: none;
     }
 }
 
-.tooltip{
+.tooltip {
     position: relative;
-        display: inline;
+    display: inline;
 }
 
 .tooltip:hover::before {
     content: 'tooltip';
-
     background: blueviolet;
     border-radius: 5px;
     bottom: 50px;
@@ -257,16 +282,48 @@ button[disabled]{
     left: 50%;
     transform: translateX(-50%);
     position: absolute;
-    animation: fade-in 400ms ease-in-out  forwards
+    animation: fade-in 400ms ease-in-out forwards
 }
 
-@keyframes fade-in{
-    0%{
+@keyframes fade-in {
+    0% {
         opacity: 0;
         transform: translateX(-50%) translateY(40px) scale(0);
     }
-    100%{
-        transform:translateX(-50%) translateY(0px)  scale(1);
+    100% {
+        transform: translateX(-50%) translateY(0px) scale(1);
         opacity: 1;
     }
 }
+
+@keyframes item_fade{
+    0%{
+        opacity: 0;
+        height: 0px;
+    }
+    100%{
+        opacity: 100%;
+        height: 100%;
+    }
+}
+
+
+.solded .sold {
+    display: none;
+}
+
+.unsold {
+    display: none;
+}
+
+.solded .unsold {
+    display: initial;
+}
+
+
+
+.solded .inc,
+.solded .decr {
+    visibility: hidden;
+}
+

@@ -6,29 +6,48 @@
     <meta name="viewport" content="width=device-width">
     <title>JS Bin</title>
     <link rel="stylesheet" type="text/css" href="./styles.css">
-    <script src="./scripts.js"></script>
+
 </head>
 
 <body>
     <div class="container flex wrap center start">
         <div class="section m-1 white f-big card">
-                <form onsubmit="add(event)" class="search flex p-1">
+                <form class="search flex p-1 item-form">
                   <input type="text" class="grow " name="name" id="name-field"  placeholder="product name" />
-                    <button class="add-button p-1 ui-border-right" type="submit">add</button>
+                    <button class="add-button p-1 ui-border-right" id="add-btn" type="submit">add</button>
                 </form>
             <hr />
             <div class="item-container">
+                  <div class="row flex space-b p-1 wrap baseline availble item" >
+                <div class="itemname p-2">${item.name}</div>
+                <div class="center  ">
+                    <button class="green inc ">+</button>
+                    <span class="small-border gray p-2 counter">${item.count}</span> 
+                    <button class="decr red " disabled>-</button>
+                </div>
+                <div class="left">
+                    <button class="ui-button  tooltip sold  ">Sold</button>
+                    <button class="ui-button  gray-dark unsold ">Buy</button>
+                    <button class="ui-button red del"   >X</button>
+                </div>
+            </div>
             </div>
         </div>
         <div class="section white m-1 f-small card transition">
                 <h3 class="p-1">Availble</h3>
                 <hr>
-                <div class="content p-1 flex wrap content-availble">
+                <div class="content p-1 flex wrap content-availble  ">
+                    <div class="p-2 gray small-border m-4 relative stat">
+                      <span class="title">${item.name}</span> 
+                       <span class="small-border orange p-3 floating-label num">34
+                       </span>
+                       </div>
                 </div>
             <hr/>
                 <h3 class="p-1">Sold</h3>
                 <hr>
                 <div class="content p-1 content-sold flex wrap">
+                
                 </div>
         </div>
     </div>
@@ -44,4 +63,7 @@
         </div>
     </div>
 </body>
+
+<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+    <script src="./scripts.js"></script>
 </html>
